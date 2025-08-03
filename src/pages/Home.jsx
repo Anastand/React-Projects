@@ -7,6 +7,10 @@ function Home() {
         1. This project has
         <Link to="/count"> Counter App</Link>
       </h1>
+      <h1>
+        2. This project has movie fetcher app
+        {/* <Link to="/count"> movie Fetcher App</Link> */}
+      </h1>
     </div>
   );
 }

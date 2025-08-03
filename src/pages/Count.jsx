@@ -24,6 +24,11 @@ function Count() {
       >
         click me
       </button>
+      <p>
+        {" "}
+        don't refresh this page as vercel has some issue with using react router
+        dom and for now i cant figure it out
+      </p>
     </div>
   );
 }
