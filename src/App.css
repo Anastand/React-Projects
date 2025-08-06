@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -16,6 +17,13 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.movie-card-comp{
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: aqua;
 }
 
 @keyframes logo-spin {
