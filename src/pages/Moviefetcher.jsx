@@ -13,7 +13,7 @@ function Moviefetcher() {
       try {
         const popularMovies = await getPopularMovies();
         setMovies(popularMovies);
-        console.log(movies[0]); // figure out why this is not working
+        // console.log(movies[0]); // figure out why this is not working
       } catch (err) {
         console.log(err);
         setError("failed to Fetch Movies......");
@@ -33,9 +33,20 @@ function Moviefetcher() {
   //   // here we are passing an array of different movie objects
   // ];
 
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault(); // prevents page reload and keeps input value
-    alert(searchTerm);
+    if (!searchTerm.trim()) return;
+    // if() return
+    try {
+      const selectedMovie = await searchMovies(searchTerm);
+      setMovies(selectedMovie);
+      console.log("im herer");
+    } catch (error) {
+      console.log(error);
+      setError("failed to load searched movie");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const fetchMovie = async () => {

@@ -9,9 +9,11 @@ export const getPopularMovies = async () => {
   console.log(data.results)
   return data.results
 }
-export const searchMovies = async () => {
-  const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+export const searchMovies = async (query) => {
+  const response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+  // learn how to use url better
   const data = await response.json();
+  console.log("here from api")
   console.log(data.results)
   return data.results
 }
