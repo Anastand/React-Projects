@@ -18,6 +18,16 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.btn-fav{
+  padding: 10px;
+  background-color: aliceblue;
+}
+.btn-fav:hover{
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.btn-fav-active{
+  background-color: red;
+}
 .movie-card-comp{
   margin: 1rem;
   padding: 1.5rem;

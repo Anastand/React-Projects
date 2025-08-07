@@ -1,5 +1,14 @@
 import React from "react";
+import { useMovieContext } from "../contexts/MovieContext";
 function MovieCard({ movies }) {
+  const { isFav, addToFav, removeFav } = useMovieContext();
+  const favorite = isFav(movies.id);
+  const onFavClick = (e) => {
+    e.preventDefault();
+    if (favorite) removeFav(movies.id);
+    else addToFav(movies);
+  };
+
   return (
     <div className="movie-card-comp">
       <div>
@@ -10,10 +19,13 @@ function MovieCard({ movies }) {
         />
         <div>
           {/* favourite thing */}
-          <button>
+          <button
+            className={`"btn-fav" ${favorite ? "btn-fav-active" : "btn-fav"}`}
+            onClick={onFavClick}
+          >
             ❤️
-            {/* add onclick func */}
           </button>
+          
         </div>
       </div>
       <div>

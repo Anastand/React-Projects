@@ -1,19 +1,11 @@
 // my first time with this so i dont understand a lot
-
-import {
-  Children,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import { useSearchParams } from "react-router-dom";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const MovieContext = createContext();
 // ➡️ This creates a new context object. It’s like creating a global "space" to store data (favorites) that other components can subscribe to.
 // Think of this as your "Movie App Global Data Store".
 
-export const useMovieContext =()=> useContext(MovieContext);
+export const useMovieContext = () => useContext(MovieContext);
 // ➡️ This is a custom hook you made to access the context easily.
 
 export const MovieProvider = ({ children }) => {

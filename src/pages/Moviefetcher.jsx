@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { getPopularMovies, searchMovies } from "../services/api";
-
+import { Link } from "react-router-dom";
 function Moviefetcher() {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
@@ -65,6 +65,7 @@ function Moviefetcher() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button type="submit">Search</button>
+          <button ><Link to="/fav">fav page</Link></button>
         </form>
       </div>
 
