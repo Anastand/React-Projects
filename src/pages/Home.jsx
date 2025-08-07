@@ -12,6 +12,13 @@ function Home() {
         2. This project has
         <Link to="/movie"> movie Fetcher App</Link>
       </h1>
+      <br />
+
+      <button>
+        <a href="https://github.com/Anastand/React-Projects#readme">
+          Github Link
+        </a>
+      </button>
     </div>
   );
 }

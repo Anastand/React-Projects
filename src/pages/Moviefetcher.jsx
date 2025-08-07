@@ -56,6 +56,12 @@ function Moviefetcher() {
   return (
     <>
       <div>
+        <div>
+          <button>
+            <Link to="/">HOME</Link>
+          </button>
+        </div>
+        <br />
         <form onSubmit={handleSearch}>
           {/* action goes to the page, type defines button behavior */}
           <input
@@ -65,7 +71,9 @@ function Moviefetcher() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button type="submit">Search</button>
-          <button ><Link to="/fav">fav page</Link></button>
+          <button>
+            <Link to="/fav">fav page</Link>
+          </button>
         </form>
       </div>
 

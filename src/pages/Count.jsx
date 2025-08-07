@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 function Count() {
   const [count, setCount] = useState(0);
   return (
@@ -27,6 +27,10 @@ function Count() {
       <p>
         try refresh this page as vercel has some issue with using react router
       </p>
+      <br />
+      <button>
+        <Link to="/"> Home Page</Link>
+      </button>
     </div>
   );
 }
